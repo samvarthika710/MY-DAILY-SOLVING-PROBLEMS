@@ -5,10 +5,13 @@ class Main{
         int left = 0;
         int right = arr.length - 1;
         int sum;
+        boolean found = false;
         while(left < right){
             sum = arr[left] + arr[right];
             if(sum == target){
                 System.out.print(left + " " + right);
+                found = true;
+                break;
             }
             else if(sum > target){
                 right--;
@@ -17,6 +20,9 @@ class Main{
                 left++;
             }
             
+        }
+        if(!found){
+            System.out.print("target not found");
         }
     }
 }
