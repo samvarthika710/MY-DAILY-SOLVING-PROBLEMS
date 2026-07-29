@@ -1,0 +1,22 @@
+class Main{
+    public static void main(String[] args){
+        int[] arr = {10,30,50,70,90};
+        int target = 80;
+        int left = 0;
+        int right = arr.length - 1;
+        int sum;
+        while(left < right){
+            sum = arr[left] + arr[right];
+            if(sum == target){
+                System.out.print(left + " " + right);
+            }
+            else if(sum > target){
+                right--;
+            }
+            else{
+                left++;
+            }
+            
+        }
+    }
+}
