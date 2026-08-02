@@ -1,13 +1,12 @@
 import java.util.*;
 class Main {
 	public static void main(String[] args) {
-		int[] cse = {10,20,30,40,50};
+		int[] cse = {10,20,30,40,50,0};
 		int val = 5;
-		int[] bio = new int[cse.length +1];
-		bio[0] = val;
-		System.arraycopy(cse,0,bio,1,cse.length);
 		
+		System.arraycopy(cse,0,cse,1,cse.length - 1);
 		
-		System.out.println(Arrays.toString(bio));
+		cse[0] = val;
+		System.out.println(Arrays.toString(cse));
 	}
 }
