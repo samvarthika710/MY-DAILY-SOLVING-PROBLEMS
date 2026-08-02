@@ -1,0 +1,15 @@
+import java.util.*;
+class Main {
+	public static void main(String[] args) {
+		int[] cse = {10,20,30,40,50};
+		int val = 5;
+		int[] bio = new int[cse.length +1];
+		bio[0] = val;
+		for(int i = 0;i<cse.length;i++){
+		    bio[i+1] = cse[i];
+		}
+		
+		
+		System.out.println(Arrays.toString(bio));
+	}
+}
